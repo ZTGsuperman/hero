@@ -120,7 +120,7 @@ window.onload = function () {
         return parseInt(Math.random() * (end - star) + star);
     }
     function creatWl() {
-        var iWidth = creatNum(25, 80);
+        var iWidth = creatNum(40, 80);
         var iLeft = creatNum(400, 250 + midelLeft);
         return [iWidth, iLeft];
     }
