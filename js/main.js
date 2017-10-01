@@ -87,6 +87,15 @@ window.onload = function () {
             midelBox.style.width = next[0] + 'px';
             midelBox.style.left = next[1] - midelLeft + 'px';
 
+            var dis = hero.offsetWidth + hero.offsetLeft-leftBox.offsetWidth;
+            if (dis > 0) {
+                hero.style.left = heroL+dis-15 + 'px';
+            }
+            if (hero.offsetLeft < 0) {
+                var dis2 = 0 - hero.offsetLeft;
+                hero.style.left = heroL+dis2+ 'px';
+            }
+
             step = 0;
             num = 0;
             isPlaying = false;
