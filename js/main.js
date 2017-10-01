@@ -101,9 +101,10 @@ window.onload = function () {
         score.innerHTML = str;
         var oBtn = document.getElementById('btn');
         score.style.display = "block";
-        oBtn.onclick = function () {
+        oBtna.addEventListener('touchstart', function () {
             window.location.reload();
-        }
+        })
+       
     }
     //随机数
     function creatNum(star, end) {
