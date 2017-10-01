@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <link href="css/main.css" rel="stylesheet" />
+    <title></title>
+    <script>
+        (function () {
+            setRem()
+            window.addEventListener("orientation" in window ? "deviceorientation" : "resize", setRem);
+            function setRem() {
+                var html = document.documentElement;
+                var htmlW = html.getBoundingClientRect().width;
+                html.style.fontSize = htmlW / 12 + 'px';
+            }
+        })()
+
+        document.addEventListener('touchstart', function (ev) {
+            ev.preventDefault();
+        })
+    </script>
+</head>
+<body>
+
+    <div id="wrap">
+        <div id="gameBox">
+            <div id="rightBox"></div>
+            <div id="midelBox"></div>
+            <div id="leftBox"></div>
+            <div id="hero"></div>
+            <div id="stick"></div>
+        </div>
+    </div>
+    <div id="score">
+
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
