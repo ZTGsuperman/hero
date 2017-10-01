@@ -1,4 +1,4 @@
-// JavaScript source code
+﻿// JavaScript source code
 
 
 window.onload = function () {
@@ -101,7 +101,7 @@ window.onload = function () {
         score.innerHTML = str;
         var oBtn = document.getElementById('btn');
         score.style.display = "block";
-        oBtna.addEventListener('touchstart', function () {
+        oBtn.addEventListener('touchstart', function () {
             window.location.reload();
         })
        
