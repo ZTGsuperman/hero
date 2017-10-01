@@ -68,7 +68,7 @@ window.onload = function () {
         totalScore++;
         heroL = hero.offsetLeft - midelBox.offsetLeft;
         isPlaying = true;
-        gameBox.style.left = -midelBox.offsetLeft + 'px';
+        gameBox.style.WebkitTransform = 'translateX(' + (-midelBox.offsetLeft) + 'px)';
         gameBox.style.transition = '1s';
         step = 1;
         ev.stopPropagation();
@@ -76,7 +76,7 @@ window.onload = function () {
 
     gameBox.addEventListener("transitionend", function () {
         if (step == 1) {
-            gameBox.style.left = 0;
+            gameBox.style.WebkitTransform = 'translateX(0)';
             gameBox.style.transition = "none";
             stick.style.width = 0;
             stick.style.transition = "none";
@@ -89,7 +89,7 @@ window.onload = function () {
 
             var dis = hero.offsetWidth + hero.offsetLeft-leftBox.offsetWidth;
             if (dis > 0) {
-                hero.style.left = heroL+dis-15 + 'px';
+                hero.style.left = heroL-dis-10 + 'px';
             }
             if (hero.offsetLeft < 0) {
                 var dis2 = 0 - hero.offsetLeft;
