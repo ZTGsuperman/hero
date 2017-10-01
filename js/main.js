@@ -89,7 +89,7 @@ window.onload = function () {
 
             var dis = hero.offsetWidth + hero.offsetLeft-leftBox.offsetWidth;
             if (dis > 0) {
-                hero.style.left = heroL-dis-10 + 'px';
+                hero.style.left = heroL-dis-6 + 'px';
             }
             if (hero.offsetLeft < 0) {
                 var dis2 = 0 - hero.offsetLeft;
