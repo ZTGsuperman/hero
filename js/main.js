@@ -20,6 +20,9 @@ window.onload = function () {
     var isPlaying = false;
     var totalScore = 0;
 
+    hero.style.transform = hero.style.webkitTransform = 'translateZ(0px)';
+    stick.style.transform = hero.style.webkitTransform = 'translateZ(0px)'
+
     wrap.addEventListener('touchstart', function () {
      
             if (isPlaying) {
@@ -68,7 +71,7 @@ window.onload = function () {
         totalScore++;
         heroL = hero.offsetLeft - midelBox.offsetLeft;
         isPlaying = true;
-        gameBox.style.WebkitTransform = 'translateX(' + (-midelBox.offsetLeft) + 'px)';
+        gameBox.style.WebkitTransform = 'translateX(' + (-midelBox.offsetLeft) + 'px) translateZ(0px)';
         gameBox.style.transition = '1s';
         step = 1;
         ev.stopPropagation();
@@ -76,7 +79,7 @@ window.onload = function () {
 
     gameBox.addEventListener("transitionend", function () {
         if (step == 1) {
-            gameBox.style.WebkitTransform = 'translateX(0)';
+            gameBox.style.WebkitTransform = 'translateX(0) translateZ(0px)';
             gameBox.style.transition = "none";
             stick.style.width = 0;
             stick.style.transition = "none";
