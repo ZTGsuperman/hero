@@ -21,7 +21,7 @@ window.onload = function () {
     var totalScore = 0;
 
     hero.style.transform = hero.style.webkitTransform = 'translateZ(0px)';
-    stick.style.transform = hero.style.webkitTransform = 'translateZ(0px)'
+   
 
     wrap.addEventListener('touchstart', function () {
      
@@ -45,7 +45,7 @@ window.onload = function () {
             midelLeft = midelBox.offsetLeft;
             isPlaying = true;
             stick.style.transition = "0.5s";
-            stick.style.WebkitTransform = "rotate(0deg)";
+            stick.style.WebkitTransform = "rotate(0deg) translateZ(0px)";
             if (num < (midelBox.offsetLeft - hero.offsetWidth - hero.offsetLeft) || num > (midelBox.offsetLeft + midelBox.offsetWidth - hero.offsetLeft - hero.offsetWidth)) {
                 off = false;
             }
@@ -83,7 +83,7 @@ window.onload = function () {
             gameBox.style.transition = "none";
             stick.style.width = 0;
             stick.style.transition = "none";
-            stick.style.WebkitTransform = "rotate(-90deg)";
+            stick.style.WebkitTransform = "rotate(-90deg) translateZ(0px)";
             hero.style.transition = "none";
             hero.style.left = heroL + 'px';
             leftBox.style.width = midelBox.offsetWidth + 'px';
